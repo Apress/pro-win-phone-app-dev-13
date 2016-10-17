@@ -1,0 +1,65 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ManipulationEvents_FlickingAnElement.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    Loaded="PageLoaded"
+    >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="GESTURES" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock Text="manipulation" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Canvas x:Name="ContentPanel"
+            Background="DarkGreen"
+            Grid.Row="1"
+            Margin="12,12,12,12">
+            <Rectangle Width="456"  Height="583">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0.1">
+                        <GradientStop Color="#7F255115"/>
+                        <GradientStop Color="#338BC376" Offset="0.194"/>
+                        <GradientStop Color="#4C338713" Offset="0.5"/>
+                        <GradientStop Color="#330F2707" Offset="0.877"/>
+                        <GradientStop Color="#40759C64" Offset="0.664"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="456"  Height="583">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="-0.1, 0.5" MappingMode="RelativeToBoundingBox" StartPoint="0,0.1">
+                        <GradientStop Color="#2C40722E" Offset="0.071"/>
+                        <GradientStop Color="#33355528" Offset="0.205"/>
+                        <GradientStop Color="#33185F00" Offset="0.478"/>
+                        <GradientStop Color="#69378326" Offset="0.735"/>
+                        <GradientStop Color="#40548541" Offset="0.918"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image Name="FaceDownCard"
+                Stretch="Uniform"
+                Source="/Assets/Cards/back.png"
+                Height="200"
+                Margin="30" />
+        </Canvas>
+    </Grid>
+
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="System.Windows.UIElement" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.FrameworkElement" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Panel" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Grid" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="System.Windows.Controls.Panel" ManuallyRouted="true">
+      <Path>
+        <Point X="6.5" Y="3.941" />
+        <Point X="6.5" Y="4.245" />
+        <Point X="4.75" Y="4.245" />
+        <Point X="4.75" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Canvas" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.StackPanel" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="System.Windows.Controls.Panel" ManuallyRouted="true">
+      <Path>
+        <Point X="6.5" Y="3.941" />
+        <Point X="6.5" Y="4.245" />
+        <Point X="8.25" Y="4.245" />
+        <Point X="8.25" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

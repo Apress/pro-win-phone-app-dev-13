@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+	<DefaultLanguage xmlns="" code="en-US" />
+	<App xmlns="" ProductID="{3029c59a-d6b8-4838-b770-8145484ebb19}" Title="LiveTiles" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="LiveTiles author" Description="Sample description" Publisher="LiveTiles" PublisherID="{eeb97fab-2cfa-474f-b0ec-0ac3334cb538}">
+		<IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+		<Capabilities>
+			<Capability Name="ID_CAP_NETWORKING" />
+			<Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+			<Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+			<Capability Name="ID_CAP_SENSORS" />
+			<Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+		</Capabilities>
+		<Tasks>
+			<DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+		</Tasks>
+		<Tokens>
+			<PrimaryToken TokenID="LiveTilesToken" TaskName="_default">
+				<TemplateIconic>
+					<SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\IconicTileSmall.png</SmallImageURI>
+					<Count>6</Count>
+					<IconImageURI IsRelative="true" IsResource="false">Assets\Tiles\IconicTileMediumLarge.png</IconImageURI>
+					<Title>Title</Title>
+					<Message>Message</Message>
+					<BackgroundColor>#5A7594</BackgroundColor>
+					<HasLarge>True</HasLarge>
+					<LargeContent1>LargeContent1</LargeContent1>
+					<LargeContent2>LargeContent2</LargeContent2>
+					<LargeContent3>LargeContent3</LargeContent3>
+					<DeviceLockImageURI></DeviceLockImageURI>
+				</TemplateIconic>
+
+
+				<!--<TemplateFlip>
+					<SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000004630599XSmall.jpg</SmallImageURI>
+					<Count>6</Count>
+					<BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000004630599XSmall.jpg</BackgroundImageURI>
+					<Title>Surf Sites</Title>
+					<BackContent>Pleasure Point wind 11 to 13 mph</BackContent>
+					<BackBackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000012945007XSmall.jpg</BackBackgroundImageURI>
+					<BackTitle>Surf Advisories</BackTitle>
+					<LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000004630599XSmall.jpg</LargeBackgroundImageURI>
+					<LargeBackContent>High surf, poor visibility</LargeBackContent>
+					<LargeBackBackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000012945007XSmall.jpg</LargeBackBackgroundImageURI>
+					<DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>
+					<HasLarge>True</HasLarge>				
+				</TemplateFlip>-->
+
+				<!--<TemplateCycle>
+					<SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000002999571XSmall.jpg</SmallImageURI>
+					<Title>Surf Sites</Title>
+					<Photo01ImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000002999571XSmall.jpg</Photo01ImageURI>
+					<Photo02ImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000004630599XSmall.jpg</Photo02ImageURI>
+					<Photo03ImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000005268101XSmall.jpg</Photo03ImageURI>
+					<Photo04ImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000012945007XSmall.jpg</Photo04ImageURI>
+					<Photo05ImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000014745608XSmall.jpg</Photo05ImageURI>
+					<Photo06ImageURI IsRelative="true" IsResource="false">Assets\Tiles\iStock_000016850786XSmall.jpg</Photo06ImageURI>
+					<Photo07ImageURI IsRelative="true" IsResource="false">
+					</Photo07ImageURI>
+					<Photo08ImageURI IsRelative="true" IsResource="false">
+					</Photo08ImageURI>
+					<Photo09ImageURI IsRelative="true" IsResource="false">
+					</Photo09ImageURI>
+					<Count>6</Count>
+					<HasLarge>True</HasLarge>
+					<DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>
+				</TemplateCycle>-->
+			</PrimaryToken>
+		</Tokens>
+		<ScreenResolutions>
+			<ScreenResolution Name="ID_RESOLUTION_WVGA" />
+			<ScreenResolution Name="ID_RESOLUTION_WXGA" />
+			<ScreenResolution Name="ID_RESOLUTION_HD720P" />
+		</ScreenResolutions>
+	</App>
+</Deployment>

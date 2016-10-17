@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTemplates", "CustomTemplates\CustomTemplates.csproj", "{db262af1-8322-42b7-8849-bfd2e158c51b}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB262AF1-8322-42B7-8849-BFD2E158C51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB262AF1-8322-42B7-8849-BFD2E158C51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB262AF1-8322-42B7-8849-BFD2E158C51B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DB262AF1-8322-42B7-8849-BFD2E158C51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB262AF1-8322-42B7-8849-BFD2E158C51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB262AF1-8322-42B7-8849-BFD2E158C51B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

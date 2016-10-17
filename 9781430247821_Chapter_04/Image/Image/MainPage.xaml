@@ -1,0 +1,118 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Image.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="PHONE CONTROLS" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock Text="image" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1" 
+              Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Fill"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Style="{StaticResource PhoneTextTitle2Style}" />
+            <Border BorderThickness="3" Margin="5"
+                    BorderBrush="Red"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Grid.Row="0">
+                <Image Source="http://a0.twimg.com/a/1312493385/images/logos/logo_twitter_wordmark_1000.png"
+                       Stretch="Fill"
+                       Height="128"
+                       Width="128" />
+
+            </Border>
+
+            <TextBlock Text="None"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Style="{StaticResource PhoneTextTitle2Style}" />
+            <Border BorderThickness="3" Margin="5"
+                    BorderBrush="Red"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Grid.Row="1">
+                <Image Source="http://a0.twimg.com/a/1312493385/images/logos/logo_twitter_wordmark_1000.png"
+                       Stretch="None"
+                       Height="128"
+                       Width="128" />
+            </Border>
+
+            <TextBlock Text="Uniform"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Style="{StaticResource PhoneTextTitle2Style}" />
+            <Border BorderThickness="3" Margin="5"
+                    BorderBrush="Red"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Grid.Row="2">
+                <Image Source="http://a0.twimg.com/a/1312493385/images/logos/logo_twitter_wordmark_1000.png"
+                       Stretch="Uniform"
+                       Height="128"
+                       Width="128" />
+            </Border>
+
+            <TextBlock Text="UniformToFill"
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Style="{StaticResource PhoneTextTitle2Style}" />
+            <Border BorderThickness="3" Margin="5"
+                    BorderBrush="Red"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Grid.Row="3">
+                <Image Source="http://a0.twimg.com/a/1312493385/images/logos/logo_twitter_wordmark_1000.png"
+                       Stretch="UniformToFill"
+                       Height="128"
+                       Width="128" />
+            </Border>
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

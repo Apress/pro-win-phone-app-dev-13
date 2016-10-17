@@ -1,0 +1,158 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ViewBox.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+
+    <phone:PhoneApplicationPage.Resources>
+        <LinearGradientBrush
+            x:Key="RectangleBrush"
+            EndPoint="0.251,0.707"
+            StartPoint="0.677,0.042">
+            <GradientStop
+                Color="#FF8484B5"
+                Offset="0" />
+            <GradientStop
+                Color="#FF4A49A4"
+                Offset="0.795" />
+            <GradientStop
+                Color="#FF8180C0"
+                Offset="0.184" />
+        </LinearGradientBrush>
+        <RadialGradientBrush
+            x:Key="EllipseFill">
+            <GradientStop
+                Color="#FFFBFB02"
+                Offset="0.133" />
+            <GradientStop
+                Color="Red"
+                Offset="0.863" />
+            <GradientStop
+                Color="#FFF79F02"
+                Offset="0.297" />
+        </RadialGradientBrush>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid
+        x:Name="LayoutRoot"
+        Background="Transparent">
+        <Grid.RowDefinitions>
+
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="300" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel
+            x:Name="TitlePanel"
+            Grid.Row="0"
+            Margin="12,17,0,28">
+            <TextBlock
+                x:Name="ApplicationTitle"
+                Text="controls"
+                Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock
+                x:Name="PageTitle"
+                Text="viewbox"
+                Margin="9,-7,0,0"
+                Style="{StaticResource PhoneTextTitle1Style}" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid
+            x:Name="ContentPanel"
+            Grid.Row="1"
+            Margin="12,0,12,0">
+            <Viewbox
+                VerticalAlignment="Top"
+                Stretch="{Binding ElementName=StretchPicker, Path=SelectedItem.Content}"
+                StretchDirection="{Binding ElementName=DirectionPicker, Path=SelectedItem.Content}"
+                Width="{Binding ElementName=SizeSlider, Path=Value}"
+                Height="{Binding ElementName=SizeSlider, Path=Value}"
+                >
+                <Grid
+                    Height="400"
+                    Width="500">
+                    <Rectangle
+                        Height="129"
+                        HorizontalAlignment="Left"
+                        x:Name="rectangle1"
+                        StrokeThickness="1"
+                        VerticalAlignment="Top"
+                        Width="193"
+                        Fill="{StaticResource RectangleBrush}" />
+                    <Ellipse
+                        Margin="171,0,180,0"
+                        Height="105"
+                        Width="105"
+                        Fill="{StaticResource EllipseFill}"
+                        VerticalAlignment="Bottom"
+                        d:LayoutOverrides="Height" />
+                    <Path
+                        Data="M379,182 L328.47772,232.52228"
+                        HorizontalAlignment="Right"
+                        Height="89.522"
+                        Margin="0,47,0,0"
+                        Stretch="Fill"
+                        Stroke="Lime"
+                        StrokeThickness="4"
+                        VerticalAlignment="Top"
+                        Width="89.522"
+                        UseLayoutRounding="False" />
+
+                </Grid>
+            </Viewbox>
+
+        </Grid>
+        <toolkit:ListPicker
+            Grid.Row="2"
+            x:Name="StretchPicker">
+            <toolkit:ListPickerItem
+                Content="None" Tag="0"/>
+            <toolkit:ListPickerItem
+                Content="Fill" Tag="1"/>
+            <toolkit:ListPickerItem
+                Content="Uniform" Tag="2"/>
+            <toolkit:ListPickerItem
+                Content="UniformToFill" Tag="3"/>
+        </toolkit:ListPicker>
+
+        <toolkit:ListPicker
+            Grid.Row="3"
+            x:Name="DirectionPicker">
+            <toolkit:ListPickerItem
+                Content="UpOnly" />
+            <toolkit:ListPickerItem
+                Content="DownOnly" />
+            <toolkit:ListPickerItem
+                Content="Both" />
+        </toolkit:ListPicker>
+
+        <Slider Grid.Row="4"
+            x:Name="SizeSlider"
+            Minimum="0"
+            Maximum="500"
+            Value="200" />
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

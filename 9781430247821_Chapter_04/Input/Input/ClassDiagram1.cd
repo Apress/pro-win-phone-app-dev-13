@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.Phone.Controls.TimePicker" Collapsed="true">
+    <Position X="40.5" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Controls.DateTimePickerBase" Collapsed="true">
+    <Position X="39.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Control" Collapsed="true">
+    <Position X="37.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Controls.DatePicker" Collapsed="true">
+    <Position X="38.5" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Controls.AutoCompleteBox" Collapsed="true">
+    <Position X="41.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.PasswordBox" Collapsed="true">
+    <Position X="37.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.TextBox" Collapsed="true">
+    <Position X="36" Y="13.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Slider" Collapsed="true">
+    <Position X="34.25" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Primitives.RangeBase" Collapsed="true">
+    <Position X="34.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Controls.Rating" Collapsed="true">
+    <Position X="32.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Controls.PhoneTextBox" Collapsed="true">
+    <Position X="36" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

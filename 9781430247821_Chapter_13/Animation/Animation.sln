@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "Animation\Animation.csproj", "{7a7cbb99-e29b-49cb-969b-2a4d901e2145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandlingState", "HandlingState\HandlingState.csproj", "{979e581b-525d-4b14-b538-0abb425ed1a8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomVisualStates", "CustomVisualStates\CustomVisualStates.csproj", "{c130c6b2-b564-4075-a999-93c92d5563e3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A7CBB99-E29B-49CB-969B-2A4D901E2145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7CBB99-E29B-49CB-969B-2A4D901E2145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7CBB99-E29B-49CB-969B-2A4D901E2145}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7A7CBB99-E29B-49CB-969B-2A4D901E2145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7CBB99-E29B-49CB-969B-2A4D901E2145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A7CBB99-E29B-49CB-969B-2A4D901E2145}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{979E581B-525D-4B14-B538-0ABB425ED1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979E581B-525D-4B14-B538-0ABB425ED1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979E581B-525D-4B14-B538-0ABB425ED1A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{979E581B-525D-4B14-B538-0ABB425ED1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979E581B-525D-4B14-B538-0ABB425ED1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979E581B-525D-4B14-B538-0ABB425ED1A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C130C6B2-B564-4075-A999-93C92D5563E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C130C6B2-B564-4075-A999-93C92D5563E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C130C6B2-B564-4075-A999-93C92D5563E3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C130C6B2-B564-4075-A999-93C92D5563E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C130C6B2-B564-4075-A999-93C92D5563E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C130C6B2-B564-4075-A999-93C92D5563E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

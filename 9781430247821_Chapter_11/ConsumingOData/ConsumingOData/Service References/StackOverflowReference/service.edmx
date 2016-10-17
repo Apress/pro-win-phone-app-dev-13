@@ -1,0 +1,194 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="MetaModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="Badge">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Date" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="User" Relationship="MetaModel.BadgeUser" FromRole="Badge" ToRole="User" />
+      </EntityType>
+      <EntityType Name="Comment">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Score" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Text" Type="Edm.String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Post" Relationship="MetaModel.CommentPost" FromRole="Comment" ToRole="Post" />
+        <NavigationProperty Name="User" Relationship="MetaModel.CommentUser" FromRole="Comment" ToRole="User" />
+      </EntityType>
+      <EntityType Name="Post">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostTypeId" Type="Edm.Byte" Nullable="true" />
+        <Property Name="AcceptedAnswerId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Score" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ViewCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Body" Type="Edm.String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+        <Property Name="OwnerUserId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="LastEditorUserId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="LastEditDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="LastActivityDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Title" Type="Edm.String" Nullable="true" MaxLength="250" Unicode="true" FixedLength="false" />
+        <Property Name="Tags" Type="Edm.String" Nullable="true" MaxLength="150" Unicode="true" FixedLength="false" />
+        <Property Name="AnswerCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CommentCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="FavoriteCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ClosedDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ParentId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CommunityOwnedDate" Type="Edm.DateTime" Nullable="true" />
+        <NavigationProperty Name="Comments" Relationship="MetaModel.CommentPost" FromRole="Post" ToRole="Comment" />
+        <NavigationProperty Name="Children" Relationship="MetaModel.PostPost" FromRole="Post" ToRole="Post1" />
+        <NavigationProperty Name="Parent" Relationship="MetaModel.PostPost" FromRole="Post1" ToRole="Post" />
+      </EntityType>
+      <EntityType Name="Tag">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="TagName" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="false" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="User">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Reputation" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EmailHash" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="false" FixedLength="false" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="LastAccessDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="WebsiteUrl" Type="Edm.String" Nullable="true" MaxLength="200" Unicode="true" FixedLength="false" />
+        <Property Name="Location" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="Age" Type="Edm.Int32" Nullable="true" />
+        <Property Name="AboutMe" Type="Edm.String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+        <Property Name="Views" Type="Edm.Int32" Nullable="true" />
+        <Property Name="UpVotes" Type="Edm.Int32" Nullable="true" />
+        <Property Name="DownVotes" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="Badges" Relationship="MetaModel.BadgeUser" FromRole="User" ToRole="Badge" />
+        <NavigationProperty Name="Comments" Relationship="MetaModel.CommentUser" FromRole="User" ToRole="Comment" />
+      </EntityType>
+      <EntityType Name="Vote">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="VoteTypeId" Type="Edm.Byte" Nullable="true" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="BountyAmount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+        <NavigationProperty Name="VoteType" Relationship="MetaModel.VoteVoteType" FromRole="Vote" ToRole="VoteType" />
+      </EntityType>
+      <EntityType Name="VoteType">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Byte" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="false" FixedLength="false" />
+        <NavigationProperty Name="Votes" Relationship="MetaModel.VoteVoteType" FromRole="VoteType" ToRole="Vote" />
+      </EntityType>
+      <Association Name="BadgeUser">
+        <End Role="Badge" Type="MetaModel.Badge" Multiplicity="*" />
+        <End Role="User" Type="MetaModel.User" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="User">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Badge">
+            <PropertyRef Name="UserId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="CommentPost">
+        <End Role="Comment" Type="MetaModel.Comment" Multiplicity="*" />
+        <End Role="Post" Type="MetaModel.Post" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="Post">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Comment">
+            <PropertyRef Name="PostId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="CommentUser">
+        <End Role="Comment" Type="MetaModel.Comment" Multiplicity="*" />
+        <End Role="User" Type="MetaModel.User" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="User">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Comment">
+            <PropertyRef Name="UserId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="VoteVoteType">
+        <End Role="Vote" Type="MetaModel.Vote" Multiplicity="*" />
+        <End Role="VoteType" Type="MetaModel.VoteType" Multiplicity="0..1" />
+        <ReferentialConstraint>
+          <Principal Role="VoteType">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Vote">
+            <PropertyRef Name="VoteTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PostPost">
+        <End Role="Post" Type="MetaModel.Post" Multiplicity="0..1" />
+        <End Role="Post1" Type="MetaModel.Post" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Post">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Post1">
+            <PropertyRef Name="ParentId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="StackExchange.DataExplorer.Models.StackEntities" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="Entities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Badges" EntityType="MetaModel.Badge" />
+        <EntitySet Name="Comments" EntityType="MetaModel.Comment" />
+        <EntitySet Name="Posts" EntityType="MetaModel.Post" />
+        <EntitySet Name="Tags" EntityType="MetaModel.Tag" />
+        <EntitySet Name="Users" EntityType="MetaModel.User" />
+        <EntitySet Name="Votes" EntityType="MetaModel.Vote" />
+        <EntitySet Name="VoteTypes" EntityType="MetaModel.VoteType" />
+        <AssociationSet Name="BadgeUser" Association="MetaModel.BadgeUser">
+          <End Role="Badge" EntitySet="Badges" />
+          <End Role="User" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="CommentPost" Association="MetaModel.CommentPost">
+          <End Role="Comment" EntitySet="Comments" />
+          <End Role="Post" EntitySet="Posts" />
+        </AssociationSet>
+        <AssociationSet Name="CommentUser" Association="MetaModel.CommentUser">
+          <End Role="Comment" EntitySet="Comments" />
+          <End Role="User" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="VoteVoteType" Association="MetaModel.VoteVoteType">
+          <End Role="Vote" EntitySet="Votes" />
+          <End Role="VoteType" EntitySet="VoteTypes" />
+        </AssociationSet>
+        <AssociationSet Name="PostPost" Association="MetaModel.PostPost">
+          <End Role="Post" EntitySet="Posts" />
+          <End Role="Post1" EntitySet="Posts" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

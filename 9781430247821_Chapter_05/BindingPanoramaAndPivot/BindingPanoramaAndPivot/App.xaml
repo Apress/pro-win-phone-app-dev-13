@@ -1,0 +1,44 @@
+﻿<Application
+    x:Class="BindingPanoramaAndPivot.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:data="clr-namespace:BindingPanoramaAndPivot"
+    >
+    <!--Application Resources-->
+    <Application.Resources>
+        <data:MyData xmlns:local="clr-namespace:BindingPanoramaAndPivot" x:Key="MyData" />
+
+        <DataTemplate x:Key="MyTitleTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Title}" />
+                <TextBlock Text="{Binding Subtitle}" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MyHeaderTemplate">
+            <TextBlock Text="{Binding HeadingText}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="MyItemTemplate">
+            <phone:LongListSelector ItemsSource="{Binding ContentItems}"  >
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </DataTemplate>
+
+        <local:LocalizedStrings xmlns:local="clr-namespace:BindingPanoramaAndPivot" x:Key="LocalizedStrings"/>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

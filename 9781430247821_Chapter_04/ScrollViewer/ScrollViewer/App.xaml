@@ -1,0 +1,46 @@
+﻿<Application
+    x:Class="ScrollViewer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <local:LocalizedStrings xmlns:local="clr-namespace:ScrollViewer" x:Key="LocalizedStrings"/>
+        <LinearGradientBrush
+            x:Key="RectangleBrush"
+            EndPoint="0.251,0.707"
+            StartPoint="0.677,0.042">
+            <GradientStop
+                Color="#FF8484B5"
+                Offset="0" />
+            <GradientStop
+                Color="#FF4A49A4"
+                Offset="0.795" />
+            <GradientStop
+                Color="#FF8180C0"
+                Offset="0.184" />
+        </LinearGradientBrush>
+        <RadialGradientBrush
+            x:Key="EllipseFill">
+            <GradientStop
+                Color="#FFFBFB02"
+                Offset="0.133" />
+            <GradientStop
+                Color="Red"
+                Offset="0.863" />
+            <GradientStop
+                Color="#FFF79F02"
+                Offset="0.297" />
+        </RadialGradientBrush>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tweets xmlns="http://www.falafel.com/">
+	<Tweet>
+		<Author>Bary Nusz</Author>
+		<Content>Wildfire at Lake Texoma http://twitpic.com/5kpxtf</Content>
+		<Notes>Lack of rain dropped Lake Texoma by 6 ft</Notes>
+	</Tweet>
+	<Tweet>
+		<Author>Matt Kurvin</Author>
+		<Content>Golden afternoon! http://www.surfline.com/surf-news/big-wave-coverage-from-mavericks_61122/ http://fb.me/wuSH467z</Content>
+		<Notes>Surfing at Mavericks, solid 15 ft with a couple 18, 20 ft sets</Notes>
+	</Tweet>
+	<Tweet>
+		<Author>J Tower</Author>
+		<Content>Beautiful day! The perfect weather to ride my bike to the office.</Content>
+		<Notes>Been on the Hart-Montague Trail State Park bike trail?</Notes>
+	</Tweet>
+	<Tweet>
+		<Author>Conan O'Brien</Author>
+		<Content>A publisher just asked me to write my autobiography, but they want it to be about Johnny Depp.</Content>
+		<Notes>Funny guy!</Notes>
+	</Tweet>
+</Tweets>

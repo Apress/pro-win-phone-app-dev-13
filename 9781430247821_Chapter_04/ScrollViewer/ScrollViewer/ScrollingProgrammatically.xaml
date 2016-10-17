@@ -1,0 +1,146 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ScrollViewer.ScrollingProgrammatically"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <!--brushes-->
+        <Color x:Key="Blueish">#FF5F74EC</Color>
+        <Color x:Key="Greenish">LawnGreen</Color>
+        <Color x:Key="Redish">#FFDE7474</Color>
+        <LinearGradientBrush x:Key="BlueBrush">
+            <GradientStop Color="{StaticResource Blueish}"
+                          Offset=".5" />
+            <GradientStop Color="Blue"
+                          Offset="1" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="GreenBrush">
+            <GradientStop Color="{StaticResource Greenish}"
+                          Offset=".5" />
+            <GradientStop Color="Green"
+                          Offset="1" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="RedBrush">
+            <GradientStop Color="{StaticResource Redish}"
+                          Offset=".5" />
+            <GradientStop Color="Red"
+                          Offset="1" />
+        </LinearGradientBrush>
+
+        <!--styles-->
+        <Style x:Key="BaseEllipseStyle"
+               TargetType="Ellipse">
+            <Setter Property="Height"
+                    Value="100" />
+            <Setter Property="Width"
+                    Value="100" />
+        </Style>
+
+        <Style x:Key="BlueEllipseStyle"
+               TargetType="Ellipse"
+               BasedOn="{StaticResource BaseEllipseStyle}">
+            <Setter Property="Fill"
+                    Value="{StaticResource BlueBrush}" />
+        </Style>
+
+        <Style x:Key="GreenEllipseStyle"
+               TargetType="Ellipse"
+               BasedOn="{StaticResource BaseEllipseStyle}">
+            <Setter Property="Fill"
+                    Value="{StaticResource GreenBrush}" />
+        </Style>
+
+        <Style x:Key="RedEllipseStyle"
+               TargetType="Ellipse"
+               BasedOn="{StaticResource BaseEllipseStyle}">
+            <Setter Property="Fill"
+                    Value="{StaticResource RedBrush}" />
+        </Style>
+
+        <Style x:Key="MyTextBlockStyle"
+               TargetType="TextBlock"
+               BasedOn="{StaticResource PhoneTextNormalStyle}">
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="Padding"
+                    Value="5" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+    </phone:PhoneApplicationPage.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="ScrollTopButton"
+                    Content="Scroll Top"
+                    Click="ScrollTopButton_Click" />
+            <Button x:Name="ScrollBottomButton" Content="Scroll Bottom" Click="ScrollBottomButton_Click" />
+        </StackPanel>
+        <ScrollViewer x:Name="TextScrollViewer" Margin="20"
+                      Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center"
+                           Margin="5"
+                           Style="{StaticResource PhoneTextTitle2Style}">
+        Through The Looking-Glass</TextBlock>
+                <TextBlock HorizontalAlignment="Center"
+                           Margin="5"
+                           Foreground="{StaticResource PhoneAccentBrush}"
+                           Style="{StaticResource PhoneTextTitle3Style}">
+        By Lewis Carroll</TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}">
+        One thing was certain, that the WHITE kitten had had nothing to do with 
+        it:—it was the black kitten's fault entirely. For the white kitten had 
+        been having its face washed by the old cat for the last quarter of an 
+        hour (and bearing it pretty well, considering); so you see that it COULDN'T 
+        have had any hand in the mischief.</TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}">
+        The way Dinah washed her children's faces was this: first she held the poor 
+        thing down by its ear with one paw, and then with the other paw she rubbed 
+        its face all over, the wrong way, beginning at the nose: and just now, as I 
+        said, she was hard at work on the white kitten, which was lying quite still 
+        and trying to purr—no doubt feeling that it was all meant for its good.</TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}">
+        But the black kitten had been finished with earlier in the afternoon, and so, 
+        while Alice was sitting curled up in a corner of the great arm-chair, half 
+        talking to herself and half asleep, the kitten had been having a grand game of 
+        romps with the ball of worsted Alice had been trying to wind up, and had been 
+        rolling it up and down till it had all come undone again; and there it was, 
+        spread over the hearth-rug, all knots and tangles, with the kitten running 
+        after its own tail in the middle.</TextBlock>
+
+                <TextBlock x:Name="LastParagraphTextBox" Style="{StaticResource MyTextBlockStyle}">
+        'Oh, you wicked little thing!' cried Alice, catching up the kitten, and giving 
+            it a little kiss to make it understand that it was in disgrace. 'Really, Dinah 
+            ought to have taught you better manners! You OUGHT, Dinah, you know you ought!' 
+            she added, looking reproachfully at the old cat, and speaking in as cross a 
+            voice as she could manage—and then she scrambled back into the arm-chair, taking 
+            the kitten and the worsted with her, and began winding up the ball again. But 
+            she didn't get on very fast, as she was talking all the time, sometimes to the 
+            kitten, and sometimes to herself. Kitty sat very demurely on her knee, 
+            pretending to watch the progress of the winding, and now and then putting out one 
+            paw and gently touching the ball, as if it would be glad to help, if it might.
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</phone:PhoneApplicationPage>

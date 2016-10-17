@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="NavigationToExternalURIs.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="NAVIGATION" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock Text="external uri" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1"
+              Margin="12,0,12,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"  />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBox x:Name="AddressTextBox" Grid.ColumnSpan="4"
+                     Text="http://www.falafel.com"  />
+            <Button x:Name="NavigateButton" Grid.Column="1" Grid.Row="1"
+                    Click="NavigateButton_Click">
+                <Button.Content>
+                    <Image Source="/assets/icons/dark/feature.search.png"
+                           Height="48" Width="48"
+                           Stretch="UniformToFill"  />
+                </Button.Content>
+            </Button>
+            <Button x:Name="TaskButton" Content="Task" Grid.Column="2" Grid.Row="1" Click="TaskButton_Click" />
+            <Button x:Name="JavaScriptButton" Content="JS" Grid.Column="3" Grid.Row="1" Click="JavaScriptButton_Click"  />
+            <phone:WebBrowser x:Name="Browser" 
+                              Grid.Row="2" Grid.ColumnSpan="4" 
+                              Navigating="Browser_Navigating" 
+                              Navigated="Browser_Navigated" 
+                              NavigationFailed="Browser_NavigationFailed" 
+                              ScriptNotify="Browser_ScriptNotify"
+                              LoadCompleted="Browser_LoadCompleted"
+                              />
+            <TextBlock x:Name="StatusText"
+                       Style="{StaticResource PhoneTextSmallStyle}"
+                       Text="status"
+                       Grid.Row="3" Grid.ColumnSpan="4" />
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

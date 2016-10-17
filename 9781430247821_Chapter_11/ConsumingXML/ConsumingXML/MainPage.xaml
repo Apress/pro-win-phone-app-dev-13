@@ -1,0 +1,31 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ConsumingXML.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    xmlns:uc="clr-namespace:ConsumingXML.User_Controls"
+    >
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <phone:Pivot>
+            <phone:PivotItem Header="local">
+                <uc:XMLContent />
+            </phone:PivotItem>
+            <phone:PivotItem Header="remote">
+                <uc:XMLRemote />
+            </phone:PivotItem>
+        </phone:Pivot>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.Phone.Scheduler.Alarm">
+    <Position X="1" Y="5.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Scheduler.Reminder">
+    <Position X="3.5" Y="5.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Scheduler.ScheduledNotification">
+    <Position X="2.25" Y="3" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Scheduler.ScheduledAction">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Scheduler.PeriodicTask">
+    <Position X="6" Y="5.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Phone.Scheduler.ScheduledTask">
+    <Position X="6" Y="3" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

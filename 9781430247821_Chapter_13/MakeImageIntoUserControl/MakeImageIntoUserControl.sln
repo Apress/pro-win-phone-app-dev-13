@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeImageIntoUserControl", "MakeImageIntoUserControl\MakeImageIntoUserControl.csproj", "{444317b8-9950-4150-bebb-a4b8f65588a8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{444317B8-9950-4150-BEBB-A4B8F65588A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444317B8-9950-4150-BEBB-A4B8F65588A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444317B8-9950-4150-BEBB-A4B8F65588A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{444317B8-9950-4150-BEBB-A4B8F65588A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444317B8-9950-4150-BEBB-A4B8F65588A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444317B8-9950-4150-BEBB-A4B8F65588A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

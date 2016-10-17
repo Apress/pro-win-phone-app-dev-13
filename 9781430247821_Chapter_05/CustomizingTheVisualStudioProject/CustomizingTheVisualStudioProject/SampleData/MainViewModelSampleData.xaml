@@ -1,0 +1,33 @@
+﻿<vm:MainViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:CustomizingTheVisualStudioProject.ViewModels"
+    SectionTitle="BING PHONEBOOK (DESIGN TIME)">
+
+    <vm:MainViewModel.AllItems>
+        <vm:ItemViewModel UniqueId="1" Title="Depot Hill Inn" 
+                          PhoneNumber="(831) 123-1324" 
+                          UserRating="8.7"/>
+        <vm:ItemViewModel UniqueId="2" Title="City Hotel"     
+                          PhoneNumber="(831) 123-1234" />
+        <vm:ItemViewModel UniqueId="3" Title="Venetian"       
+                          PhoneNumber="(831) 123-1278" 
+                          UserRating="5.3"/>
+        <vm:ItemViewModel UniqueId="4" Title="Harbor Bay"     
+                          PhoneNumber="(831) 123-6471" />
+        <vm:ItemViewModel UniqueId="5" Title="Butterfly Cove" 
+                          PhoneNumber="(831) 123-0505" />
+        <vm:ItemViewModel UniqueId="6" Title="El Grande"      
+                          PhoneNumber="(831) 123-1295" 
+                          UserRating="7.77"/>
+        <vm:ItemViewModel UniqueId="7" Title="Beach House"    
+                          PhoneNumber="(831) 123-1295" />
+        <vm:ItemViewModel UniqueId="8" Title="By the Sea"     
+                          PhoneNumber="(831) 123-0607" 
+                          UserRating="9.1"/>
+        <vm:ItemViewModel UniqueId="9" Title="Clair De Lune"  
+                          PhoneNumber="(831) 123-1707" 
+                          UserRating="9.8"/>
+    </vm:MainViewModel.AllItems>
+
+</vm:MainViewModel>

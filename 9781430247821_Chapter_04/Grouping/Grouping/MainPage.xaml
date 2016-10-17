@@ -1,0 +1,65 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="LongListSelector.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+
+        <phone:JumpListItemBackgroundConverter x:Key="BackgroundConverter"/>
+        <phone:JumpListItemForegroundConverter x:Key="ForegroundConverter"/>
+
+        <DataTemplate x:Key="MyObjectItemTemplate">
+            <TextBlock Text="{Binding Data}" Style="{StaticResource PhoneTextLargeStyle}"/>
+        </DataTemplate>
+
+        <DataTemplate
+    x:Key="GroupTile">
+            <Grid
+        HorizontalAlignment="Left"
+        Width="100"
+        Height="100"
+        Margin="5,20,5,5"
+        Background="{Binding Converter={StaticResource BackgroundConverter}}">
+
+                <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="{Binding Key}"
+            Margin="5"
+            Style="{StaticResource PhoneTextExtraLargeStyle}"
+            Foreground="{Binding Converter={StaticResource ForegroundConverter}}"
+                    
+            />
+            </Grid>
+        </DataTemplate>
+
+        <Style x:Key="MyObjectJumpListStyle" TargetType="phone:LongListSelector">
+            <Setter Property="GridCellSize"  Value="120,120"/>
+            <Setter Property="LayoutMode" Value="Grid" />
+            <Setter Property="ItemTemplate" Value="{StaticResource GroupTile}" />
+        </Style>
+
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <phone:LongListSelector x:Name="LongListSelector1"
+            ItemTemplate="{StaticResource MyObjectItemTemplate}"
+            GroupHeaderTemplate="{StaticResource GroupTile}"
+            JumpListStyle="{StaticResource MyObjectJumpListStyle}"
+            IsGroupingEnabled="true"
+            HideEmptyGroups ="true"/>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
